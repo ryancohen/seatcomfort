@@ -25,7 +25,7 @@ def calc_VDV(vibs, t):
     plt.show()
     VDV = 0.0
     for i in range(N/2):
-        VDV += np.abs(a_rms[i])*wb(f[i])*2.0 / N
+        VDV += (np.abs(a_rms[i])*wb(f[i])*2.0 / N)**4
     return VDV*(t[-1] - t[0])**0.25
 
 def wb(f):
